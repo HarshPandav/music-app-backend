@@ -9,4 +9,6 @@ async function createModel(req,res) {
             message: "Unauthorized"
         })
     }
+
+    jwt.verify(token, process.env.JWT_SECRET)
 }
